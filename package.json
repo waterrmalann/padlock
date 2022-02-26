@@ -1,0 +1,15 @@
+{
+  "name": "padlock",
+  "version": "1.0.0",
+  "description": "A password generator web app with strength checker.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "live-server --no-browser"
+  },
+  "author": "Alan",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
