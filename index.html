@@ -1,0 +1,124 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+        <!-- Poppins (from Google Fonts) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+        <title>Padlock | Password Generator</title>
+    </head>
+
+    <body>
+        <header id="partMain">
+            <nav>
+                <div class="container">
+                    <h2>Padlock 🔐</h2>
+                    <p>A password generator.</p>
+                </div>
+            </nav>
+            <div class="container">
+                <h2 id="title">Generate a strong, easy to remember password.</h2>
+                <input type="text" spellcheck="false" id="password" autocomplete="off"><i class="bi bi-eye-slash"
+                    id="togglePassword"></i>
+                <div class="password__more">
+                    <div>
+                        <p>It would take a computer about</p>
+                        <h2 id="passwordCrackTime">n/a</h2>
+                        <p>to crack your password.</p>
+                    </div>
+                    <div>
+                        <button id="copyPassword">Copy Password</button>
+                        <button id="generatePassword">Generate Password</button>
+                    </div>
+                </div>
+                <div class="password__generator">
+                    <label for="generator">Generation Method:</label>
+                    <select title="Pick a password generator." name="generator" id="passwordType">
+                        <option title="Traditional one word secure password generator." value="randomString">Random String Method</option>
+                        <option title="XKCD inspired password generator from words." value="passphrase">XKCD (Passphrase) Method</option>
+                        <option title="Pronouncable fake word password generator." value="pseudoword">Pseudoword Method</option>
+                        <option title="Passphrase consisting of fake words." value="pseudoword+passphrase">Pseudoword + Passphrase Method</option>
+                    </select>
+                </div>
+                <br>
+                <label><span id="passwordLengthText">Length:</span>
+                    <input id="passwordLength" value="8" type="range" min="3" max="128"></label>
+                <div style="margin-top:1rem;" class="password__checkboxes">
+                    <label><input checked id="includeUppercase" type="checkbox">Uppercase</label>
+                    <label><input checked id="includeLowercase" type="checkbox">Lowercase</label>
+                    <label><input checked id="includeDigits" type="checkbox">Digits</label>
+                    <label><input id="includeSymbols" type="checkbox">Symbols</label>
+                    <!--<label><input id="includeSpecialSymbols" type="checkbox">Special Symbols</label>-->
+                </div>
+            </div>
+        </header>
+        <div class="progress-bar">
+            <div class="progress" style="width:0%">
+            </div>
+        </div>
+
+        <section id="partInfo">
+            <div class="container">
+                <p>
+                    The majority of hacking related breaches occur from weak and stolen passwords. 
+                    Having secure passwords is extremely important to safeguard your digital life. 
+                    Padlock is a password generator that helps you do just that, featuring multiple cryotpgrahically secure random generators which you can choose from for both secure passphrases and passwords. 
+                    The passwords generated with this app under optimum settings are impossible to cack with any existing technology. 
+                    You can also use it to check the strength of your existing passwords and how long on average it would take a hacker to crack. 
+                    The tool runs locally in your web browser and no information is ever sent to any servers. 
+                    This project is open source on Github and is under the MIT license.
+                </p>
+                <h2>Which generator should I use?</h2>
+                <p>
+                    <ul>
+                        <li>
+                            <strong>Random String Method:</strong> This is the most random generator that is available in the app. It generates a completely random string based on the checkboxes and length based on the slider. This is usually extremely strong, however not so easy to remember. Consider using this method if you have a password manager.
+                        </li>
+                        <li>
+                            <strong>Pseudoword Method:</strong> A method that attempts to generate pronouncable and easy to read passwords. These features make it much more easier to remember than Random String Method. It is also generated based on the length of the slider but may not be guaranteed to always produce a result that is pronouncable, so it is recommended to generate multiple passwords and decide what is the best.
+                        </li>
+                        <li>
+                            <strong>Passphrase Method:</strong> A passphrase generator based on the <a target="_blank" href="https://xkcd.com/936/">XKCD comic</a>. It uses words from the English dictionary and therefore is easy to remember with the added benefit of having more bits of entropy making it extremely hard to crack. However, not all websites and apps allow passwords that are this long. So passphrases are better suited for encrypting files, drives, etc.. 
+                        </li>
+                        <li>
+                            <strong>Pseudoword + Passphrase Method:</strong> This method generates passphrases that consists of pseudowords (pronouncable yet not actual words). This makes it extremely secure than regular word passphrases as these words are not in any dictionary and therefore much more harder to guess. If you wish to secure extremely valuable assets such as drives and wallets, munged pseudoword passphrases are the way to go.
+                        </li>
+                    </ul>
+                </p>
+
+                <h2>Best practices.</h2>
+                <p>
+                    <ul>
+                        <li>The best way to use the generated passwords is to <b>modify them in ways known only to you</b>. Eg: make some letters capital, add symbols and numbers, or even combine two generated passwords.</li>
+                        <li><b>Never reuse passwords</b>. Generate fresh new ones for each need and store them in a password manager or an encrypted file.</li>
+                        <li><b>Use multi-factor authentication methods</b> whenever available. Using a password alone is not the safest of methods these days. Multi-factor authentication like email or message auth, biometrics, etc... makes it almost or truly impossible for an attacker to gain access to the account.</li>
+                        <li><b>Don't use any personally identifiable information</b> in your passwords. Although they may be easier to remember, they could also be found online making it very easy to guess.</li>
+                        <li><b>Rotate passwords often.</b> Keeping the same password for long periods of time gives attackers more time to guess or crack it.</li>
+                    </ul>
+                </p>
+            </div>
+        </section>
+
+        <footer id="partBottom">
+            <p>Crafted with 💝 by <a href="https://alanvarghese.me">Alan</a> | 🔓 Open-Source on <a href="https://github.com/waterrmalann/padlock">GitHub</a></p>
+        </footer>
+        
+        <!-- cryptographically secure Math.random() -->
+        <script defer src="js/math-random-polyfill.js"></script>
+        <!-- password strength checker -->
+        <script defer src="js/zxcvbn.js"></script>
+        <!-- pronouncable password generator -->
+        <script defer src="js/gpw.js"></script>
+        <!-- driver code -->
+        <script defer src="js/main.js"></script>
+    </body>
+
+</html>
