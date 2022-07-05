@@ -4,8 +4,6 @@
 
 ## [Demo](https://waterrmalann.github.io/padlock/)   |   [Source](https://github.com/waterrmalann/padlock/blob/main/js/main.js)
 
-### 2/12 | 12 Months, 12 Apps (February)
-
 A sophisticated web based password generator with strength checking. There are four available generators which can be used to create cryptographically secure and unique password combinations. The app also calculates password strength and time required for an attacker to crack it for both generated passwords and inputted passwords. This whole project was written in HTML, CSS, and vanilla JavaScript with a few dependencies.
 
 #### Third Party Libraries
