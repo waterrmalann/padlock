@@ -87,9 +87,9 @@ function randomChoice(arr) {
 }
 
 /**
- * Randomly pick an element from given array.
+ * Randomly pick between true/false with custom probability.
  * @param  {Number} probability percentage.
- * @return {Boolean} Returns true specified percent of the times .
+ * @return {Boolean} Returns true specified percent of the times.
  */
 function randomChance(probability) {
     return Math.random() < probability;
