@@ -278,9 +278,8 @@ function munge(password, uppercase, lowercase, digits, symbols) {
         _split[0] = generationData.obviousDigitSubstitutions[_firstChar];
     }
 
-    // Start loop from the index pos 1
     //let _lastChar = '';
-    for (let i = 1; i < _split.length; i++) {
+    for (let i = 0; i < _split.length; i++) {
         const _char = _split[i];
  
         if (lowercase && uppercase) {
