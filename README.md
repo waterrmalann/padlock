@@ -18,7 +18,7 @@ A sophisticated web based password generator with strength checking. There are f
 
 ### 🚀 Setup
 
-A live version and up to date version of the web app is available [here](https://waterrmalann.github.io/padlock/). If you wish to modify the app or host it yourself, you can clone the repo and do whatever you want with it.
+A live and up to date version of the web app is available [here](https://waterrmalann.github.io/padlock/). If you wish to modify the app or host it yourself, you can clone the repo and do whatever you want with it.
 
 1. [Clone the repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository).
 
@@ -39,15 +39,6 @@ npm run serve
 ```
 
 ---
-
-### To-Do
-
-- Clean up the code and make it more consistent.
-- Add site favicon.
-- Add more generators.
-- Add more words to passphrase generator.
-- Make munged password outputs easier to read.
-- [Bug] Fix password munging being inconsistent.
 
 ### 🤝 Contribution
 
