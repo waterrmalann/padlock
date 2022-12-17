@@ -1,6 +1,27 @@
+:root {
+	--background-clr: #f9fafb;
+	--text-clr: #212427;
+	--light-clr: #fff;
+	--gray-clr: lightgray;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-clr: #212427;
+		--text-clr: #f9fafb;
+		--light-clr: #fff;
+		--gray-clr: gray;
+	}
+
+	html {
+		color-scheme: dark light;
+	}
+}
+
 body {
 	margin: 0;
-	background-color: #f9fafb;
+	background-color: var(--background-clr);
+	color: var(--text-clr);
 	font-family: 'Poppins', sans-serif;
 	overflow-x: hidden;
 	line-height: 1.6;
@@ -13,9 +34,8 @@ input[type=checkbox] {
 }
 
 input[type=password]::-ms-reveal,
-input[type=password]::-ms-clear
-{
-    display: none;
+input[type=password]::-ms-clear {
+	display: none;
 }
 
 select#passwordType {
@@ -32,24 +52,28 @@ select#passwordType {
 }
 
 #partMain {
-	background-color :rgb(209, 54, 78);
+	background-color: rgb(209, 54, 78);
 	padding-bottom: 5rem;
-	
+
 	transition: background-color .85s;
 }
+
 nav {
 	padding-block: 2rem;
 }
+
 nav :is(h2, p) {
 	margin: 0;
-	color: white;
+	color: var(--light-clr);
 }
+
 #title {
-	color: white;
+	color: var(--light-clr);
 	font-weight: 800;
 }
+
 #partMain h2 {
-	color: white;
+	color: var(--light-clr);
 }
 
 #partInfo {
@@ -67,51 +91,52 @@ nav :is(h2, p) {
 }
 
 .password-card {
-	background-color: white;
+	background-color: var(--light-clr);
 	padding-block: 2rem;
 	padding-inline: 1.5rem;
 	border-top-left-radius: 0.625rem;
 	border-top-right-radius: 0.625rem;
 	box-shadow: 0px 1px 8px rgba(4, 4, 4, 0.1);
 }
+
 #password {
 	width: 100%;
 	padding-right: 5rem;
 	border: none;
 	outline: none;
 	background: none;
-	border-bottom: 2px solid white;
-	font-family: monospace;
+	border-bottom: 2px solid var(--light-clr);
+	font-family: 'Roboto Mono', monospace;
 	font-size: 2.25rem;
 	overflow-wrap: wrap;
-	color: white;
+	color: var(--light-clr);
 	margin-bottom: 2rem;
 }
 
 #passwordLength {
 	margin-top: 1rem;
 	-webkit-appearance: none;
-  width: 100%;
-  height: 10px;
-  border-radius: 5px;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+	width: 100%;
+	height: 10px;
+	border-radius: 5px;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: .2s;
+	transition: opacity .2s;
 }
 
 #passwordLength::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%; 
-  background: black;
-  cursor: pointer;
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: black;
+	cursor: pointer;
 }
 
 label {
-	color: white;
+	color: var(--light-clr);
 	font-weight: bold;
 }
 
@@ -119,6 +144,7 @@ label {
 	background-color: lightgray;
 	border-bottom-left-radius: 0.625rem;
 }
+
 .progress {
 	background-color: green;
 	height: 0.825rem;
@@ -130,7 +156,7 @@ label {
 
 .customize-card {
 	margin-top: 5rem;
-	background-color: white;
+	background-color: var(--light-clr);
 	border-radius: 0.625rem;
 	box-shadow: 0px 1px 8px rgba(4, 4, 4, 0.1);
 	padding-block: 2rem;
@@ -144,18 +170,19 @@ label {
 	margin-bottom: 1rem;
 }
 
-.password__more > div:first-child p {
+.password__more>div:first-child p {
 	margin: 0;
-	color: white;
+	color: var(--light-clr);
 	font-size: 0.825rem;
 	font-weight: bold;
 }
-.password__more > div:first-child h2 {
+
+.password__more>div:first-child h2 {
 	margin-block: 0.2rem;
 	font-size: 2rem;
 }
 
-.password__more > div:last-child {
+.password__more>div:last-child {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -167,14 +194,16 @@ button {
 	border-radius: 0.325rem;
 	outline: none;
 	border: none;
-	background-color: white;
 	font-weight: bold;
+	background-color: var(--background-clr);
+	color: var(--text-clr);
 	cursor: pointer;
 	transition: .2s;
 	box-shadow: 0px 1px 8px rgba(4, 4, 4, 0.1);
 }
+
 button:hover {
-	background-color: lightgray;
+	background-color: var(--gray-clr);
 	transition: .2s;
 }
 
@@ -182,7 +211,7 @@ button:hover {
 	margin-left: -60px;
 	cursor: pointer;
 	font-size: 2rem;
-	color: white;
+	color: var(--light-clr);
 }
 
 /* Mobile Friendly */
@@ -193,18 +222,21 @@ button:hover {
 		align-items: center;
 		flex-direction: column;
 	}
+
 	.password__more {
 		flex-direction: column;
 		text-align: center;
 		gap: 2rem;
 	}
+
 	.password__checkboxes {
 		display: flex;
 		justify-content: center;
-		align-items: center;	
+		align-items: center;
 		flex-wrap: wrap;
 	}
-	.password__checkboxes > label {
+
+	.password__checkboxes>label {
 		flex: 1 1 50%;
 	}
 }
