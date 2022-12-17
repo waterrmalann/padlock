@@ -2,6 +2,9 @@
 
 <img alt="HTML5" src="https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white"/> <img alt="CSS" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> <img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/>
 
+
+![Header](readme_header.png)
+
 ## [Demo](https://waterrmalann.github.io/padlock/)   |   [Source](https://github.com/waterrmalann/padlock/blob/main/js/main.js)
 
 A sophisticated web based password generator with strength checking. There are four available generators which can be used to create cryptographically secure and unique password combinations. The app also calculates password strength and time required for an attacker to crack it for both generated passwords and inputted passwords. This whole project was written in HTML, CSS, and vanilla JavaScript with a few dependencies.
