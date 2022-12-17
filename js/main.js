@@ -23,6 +23,8 @@ const e_includeSymbols = document.getElementById('includeSymbols');
 
 const e_title = document.getElementById('title');
 
+const e_metaThemeColor = document.querySelector('meta[name="theme-color"]');
+
 /* Constants */
 const generationData = {
     alphabets: 'abcdefghijklmnopqrstuvwxyz',
@@ -343,6 +345,7 @@ function setProgressBar(percentage, color = 'auto') {
         else color = "#df6661";
     }
     e_progress.style.backgroundColor = color;
+    e_metaThemeColor.setAttribute('content',  color);
 }
 
 /**
