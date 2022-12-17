@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-clr: #212427;
+		--background-clr: #3b3b3b;
 		--text-clr: #f9fafb;
 		--light-clr: #fff;
 		--gray-clr: gray;
